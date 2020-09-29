@@ -13,14 +13,6 @@ const drawBall = () => {
     context.closePath();
 }
 
-// setInterval(function() {
-//     context.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight)
-
-//     drawBall();
-
-//     x += 2;
-//     y += 2;
-// }, 100)
 
 const draw = () => {
     context.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
