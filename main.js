@@ -3,41 +3,45 @@ let context = canvas.getContext("2d");
 
 const radius = 15;
 
+const randomMinMax = (min, max) => {
+    return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min)) + Math.ceil(min))
+}
+
 const balls = [
     {
         color: "red",
-        x: Math.floor(Math.random() * (Math.floor(canvas.clientWidth - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        y: Math.floor(Math.random() * (Math.floor(canvas.clientHeight - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        dx: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
-        dy: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
+        x: randomMinMax(radius, canvas.clientWidth - radius),
+        y: randomMinMax(radius, canvas.clientHeight - radius),
+        dx: randomMinMax(2, 10),
+        dy: randomMinMax(2, 10),
     },
     {
         color: "green",
-        x: Math.floor(Math.random() * (Math.floor(canvas.clientWidth - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        y: Math.floor(Math.random() * (Math.floor(canvas.clientHeight - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        dx: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
-        dy: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
+        x: randomMinMax(radius, canvas.clientWidth - radius),
+        y: randomMinMax(radius, canvas.clientHeight - radius),
+        dx: randomMinMax(2, 10),
+        dy: randomMinMax(2, 10),
     },
     {
         color: "blue",
-        x: Math.floor(Math.random() * (Math.floor(canvas.clientWidth - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        y: Math.floor(Math.random() * (Math.floor(canvas.clientHeight - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        dx: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
-        dy: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
+        x: randomMinMax(radius, canvas.clientWidth - radius),
+        y: randomMinMax(radius, canvas.clientHeight - radius),
+        dx: randomMinMax(2, 10),
+        dy: randomMinMax(2, 10),
     },
     {
         color: "yellow",
-        x: Math.floor(Math.random() * (Math.floor(canvas.clientWidth - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        y: Math.floor(Math.random() * (Math.floor(canvas.clientHeight - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        dx: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
-        dy: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
+        x: randomMinMax(radius, canvas.clientWidth - radius),
+        y: randomMinMax(radius, canvas.clientHeight - radius),
+        dx: randomMinMax(2, 10),
+        dy: randomMinMax(2, 10),
     },
     {
         color: "white",
-        x: Math.floor(Math.random() * (Math.floor(canvas.clientWidth - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        y: Math.floor(Math.random() * (Math.floor(canvas.clientHeight - radius) - Math.ceil(radius)) + Math.ceil(radius)),
-        dx: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
-        dy: Math.floor(Math.random() * (Math.floor(10) - Math.ceil(2)) + Math.ceil(2)),
+        x: randomMinMax(radius, canvas.clientWidth - radius),
+        y: randomMinMax(radius, canvas.clientHeight - radius),
+        dx: randomMinMax(2, 10),
+        dy: randomMinMax(2, 10),
     }
 ]
 
